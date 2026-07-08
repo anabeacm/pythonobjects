@@ -2,7 +2,7 @@
 
 ### O que é objeto?
 
-É uma entidade que possui características (atributos) e comportamentos (métodos).
+É uma entidade (instância) que possui características (atributos) e comportamentos (métodos).
 
 Pense em um carro.
 
@@ -46,7 +46,8 @@ Exemplo:
 class Carro:
     pass
 
-# Nesse momento existe apenas o modelo. Nenhum objeto foi criado.
+# Nesse momento existe apenas o modelo.
+# Nenhum objeto foi criado.
 ```
 
 ---
