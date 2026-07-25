@@ -17,3 +17,35 @@ Implemente uma classe chamada Pessoa para representação e manipulação de dad
     Utilize os métodos alterar_nome() e alterar_idade() para modificar os dados de uma das pessoas da lista.
     Percorra a lista de pessoas e execute o método exibir_dados() para cada uma delas no terminal.
 '''
+
+class Pessoa:
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+    def alterar_nome(self, novo_nome):
+        self.nome = novo_nome
+    def alterar_idade(self, nova_idade):
+        self.idade = nova_idade
+    def exibir_dados(self):
+        print(f"{self.nome} - {self.idade}")
+
+cadastro_pessoas = []
+
+p1 = Pessoa("Afonso", 22)
+p2 = Pessoa("Sofia", 40)
+p3 = Pessoa("Ana", 66)
+
+cadastro_pessoas.append(p1)
+cadastro_pessoas.append(p2)
+cadastro_pessoas.append(p3)
+
+print("\nPessoas cadastradas:")
+for pessoa in cadastro_pessoas:
+    pessoa.exibir_dados()
+
+p1.alterar_nome("Ítalo")
+p1.alterar_idade(80)
+
+print("\nPessoas cadastradas:")
+for pessoa in cadastro_pessoas:
+    pessoa.exibir_dados()
