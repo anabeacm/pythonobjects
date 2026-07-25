@@ -46,3 +46,11 @@ carro3.trocar_cor("Vermelho")
 print(carro1.mostrar_dados())
 print(carro2.mostrar_dados())
 print(carro3.mostrar_dados())
+
+
+'''
+Retorno do terminal:
+Civic — Ano: 2012 — Cor: Prata — Estado: desligado
+Corolla — Ano: 2018 — Cor: Branco Pérola — Estado: ligado
+Gol — Ano: 2020 — Cor: Vermelho — Estado: desligado
+'''

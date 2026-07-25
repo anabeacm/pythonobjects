@@ -49,3 +49,18 @@ p1.alterar_idade(80)
 print("\nPessoas cadastradas:")
 for pessoa in cadastro_pessoas:
     pessoa.exibir_dados()
+
+
+'''
+Retorno do terminal:
+
+Pessoas cadastradas:
+Afonso - 22
+Sofia - 40
+Ana - 66
+
+Pessoas cadastradas:
+Ítalo - 80
+Sofia - 40
+Ana - 66
+'''

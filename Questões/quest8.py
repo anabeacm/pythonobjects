@@ -89,3 +89,27 @@ loja1.procurar_produto("Arroz")
 
 print("\nBuscando Café:")
 loja1.procurar_produto("Café")
+
+'''
+Retorno do terminal:
+
+Listando Produtos:
+Produtos da loja Maria Bonita:
+Arroz - R$ 26.00
+Feijão - R$ 40.00
+Macarrão - R$ 8.50
+
+Listando Produtos:
+Produtos da loja Maria Bonita:
+Arroz - R$ 30.00
+Feijão - R$ 40.00
+Macarrão - R$ 8.50
+
+Buscando Arroz:
+Produto encontrado:
+Arroz - R$ 30.00
+
+Buscando Café:
+Produto não existe.
+
+'''

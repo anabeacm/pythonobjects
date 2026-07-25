@@ -56,3 +56,53 @@ Alu1.alterar_nota(5.0)
 print("\nSituação dos alunos após a alteração:")
 for aluno in alunos:
     aluno.exibir_dados()
+
+'''
+Retorno do terminal:
+
+Dados dos alunos:
+Nome do aluno: Matheus
+Matrícula do aluno: 2023
+Nota do aluno: 7.0
+Situação: Aluno aprovado
+------------------------------
+Nome do aluno: Júlia
+Matrícula do aluno: 2024
+Nota do aluno: 9.0
+Situação: Aluno aprovado
+------------------------------
+Nome do aluno: Sofia
+Matrícula do aluno: 2025
+Nota do aluno: 8.0
+Situação: Aluno aprovado
+------------------------------
+Nome do aluno: Jaime
+Matrícula do aluno: 2020
+Nota do aluno: 6.9
+Situação: Aluno reprovado
+------------------------------
+
+Alterando notas -----
+
+Situação dos alunos após a alteração:
+Nome do aluno: Matheus
+Matrícula do aluno: 2023
+Nota do aluno: 5.0
+Situação: Aluno reprovado
+------------------------------
+Nome do aluno: Júlia
+Matrícula do aluno: 2024
+Nota do aluno: 9.0
+Situação: Aluno aprovado
+------------------------------
+Nome do aluno: Sofia
+Matrícula do aluno: 2025
+Nota do aluno: 8.0
+Situação: Aluno aprovado
+------------------------------
+Nome do aluno: Jaime
+Matrícula do aluno: 2020
+Nota do aluno: 6.9
+Situação: Aluno reprovado
+------------------------------
+'''

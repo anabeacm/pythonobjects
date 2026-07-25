@@ -62,3 +62,34 @@ biblioteca.listar_livros()
 
 print("\nBuscando livro 1984:")
 biblioteca.procurar_livro("1984")
+
+'''
+Retorno do terminal:
+
+Listando livros na biblioteca:
+Título: Dom Casmurro
+Autor: Machado de Assis
+Data de publicação: 1899
+
+Título: 1984
+Autor: George Orwell
+Data de publicação: 1949
+
+Título: O Hobbit
+Autor: J. R. R. Tolkien
+Data de publicação: 1937
+
+Título: O Pequeno Príncipe
+Autor: Antoine de Saint-Exupéry
+Data de publicação: 1943
+
+Título: A Revolução dos Bichos
+Autor: George Orwell
+Data de publicação: 1945
+
+
+Buscando livro 1984:
+Titulo: 1984
+Autor: George Orwell
+Data de publicação: 1949
+'''

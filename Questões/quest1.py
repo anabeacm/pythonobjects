@@ -40,4 +40,16 @@ print(user2.apresentar())
 print(user3.apresentar())
 
 
+'''
+Retorno do terminal:
 
+Antes do aniversário de Ana:
+Ana tem 18 anos de idade
+Pedro tem 20 anos de idade
+Fábio tem 40 anos de idade
+
+Depois do aniversário de Ana:
+Ana tem 19 anos de idade
+Pedro tem 20 anos de idade
+Fábio tem 40 anos de idade
+'''

@@ -37,3 +37,12 @@ print(livro4.mostrar_dados())
 livro4.alterar_paginas(850)
 
 print(livro4.mostrar_dados())
+
+'''
+Retorno do terminal:
+O livro 'Feiura', escrito por Monteiro Lobato, possui 400 páginas.
+O livro 'Lindeza', escrito por Ana Beatriz, possui 500 páginas.
+O livro 'Gostosura', escrito por Julieta, possui 600 páginas.
+O livro 'Fofura', escrito por Claudinho, possui 700 páginas.
+O livro 'Fofura', escrito por Claudinho, possui 850 páginas.
+'''

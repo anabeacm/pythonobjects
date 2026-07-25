@@ -48,3 +48,22 @@ print(feijao.dados())
 print(macarrao.dados())
 print(bandOvo.dados())
 print(cebola.dados())
+
+
+'''
+Retorno do terminal:
+
+Dados atuais do estoque:
+O produto Arroz, custa 30 reais e temos 45 unidades em estoque
+O produto Feijão, custa 40 reais e temos 46 unidades em estoque
+O produto Macarrão, custa 50 reais e temos 47 unidades em estoque
+O produto Bandeja de ovo, custa 60 reais e temos 48 unidades em estoque
+O produto Cebola, custa 25.0 reais e temos 49 unidades em estoque
+
+Dados atuais do estoque:
+O produto Arroz, custa 50 reais e temos 45 unidades em estoque
+O produto Feijão, custa 40 reais e temos 46 unidades em estoque
+O produto Macarrão, custa 80 reais e temos 47 unidades em estoque
+O produto Bandeja de ovo, custa 60 reais e temos 48 unidades em estoque
+O produto Cebola, custa 25.0 reais e temos 49 unidades em estoque
+'''

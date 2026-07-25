@@ -80,3 +80,23 @@ try:
     print(c1.__saldo)
 except AttributeError:
     print("Não é possível acessar diretamente um atributo privado.")
+
+'''
+Retorno do terminal:
+
+Contas cadastradas
+Titular: João | Número da conta: 1 | Saldo: R$ 300.00
+Titular: Alice | Número da conta: 2 | Saldo: R$ 4000.99
+
+Operações
+Valor inválido, operação não pode ser concluída.
+Saldo insuficiente, operação não pode ser concluída.
+
+Contas após as operações
+Titular: João | Número da conta: 1 | Saldo: R$ 260.00
+Titular: Alice | Número da conta: 2 | Saldo: R$ 4100.99
+
+Testando encapsulamento:
+Não é possível acessar diretamente um atributo privado.
+
+'''

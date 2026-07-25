@@ -56,3 +56,11 @@ conta2.sacar(9000000)
 
 print(conta1.consultar_saldo())
 print(conta2.consultar_saldo())
+
+'''
+Retorno do terminal:
+
+Saldo insuficiente
+O saldo do cliente Bia é de 9900 reais
+O saldo do cliente João é de 30300 reais
+'''
