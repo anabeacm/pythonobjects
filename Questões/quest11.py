@@ -24,10 +24,8 @@ Classe Livro:
 Classe Biblioteca:
     adicionar_livro(livro): Recebe um objeto Livro e o adiciona à lista.
     listar_livros(): Exibe os dados de todos os livros cadastrados.
-    buscar_livro(titulo): Procura um livro pelo título e retorna o objeto encontrado (ou exibe uma mensagem caso não exista).
 
 3. Execução
-
     Crie uma biblioteca.
     Instancie pelo menos três livros e adicione-os à biblioteca.
     Realize um empréstimo de um dos livros.
@@ -35,8 +33,80 @@ Classe Biblioteca:
     Devolva o livro.
     Liste todos os livros ao final mostrando seus estados.
 '''
+class Livro:
+    def __init__(self, titulo, autor, disponivel=True):
+        self.titulo = titulo
+        self.autor = autor
+        self.disponivel = disponivel
+
+    def emprestar(self):
+        if not self.disponivel:
+            print(f"\nLivro '{self.titulo}' está indisponível, já emprestado.")
+        else: 
+            self.disponivel = False
+            print(f"\nLivro '{self.titulo}' emprestado com sucesso.")
+
+    def devolver(self):
+        if self.disponivel:
+            print(f"\nLivro '{self.titulo}' já consta como disponível.")
+        else: 
+            self.disponivel = True
+            print(f"\nLivro '{self.titulo}' devolvido com sucesso.")
+
+    def exibir_dados(self):
+        situacao = "Disponível" if self.disponivel else "Emprestado"
+        print(f"Livro: {self.titulo} - Autor: {self.autor} - Situação: {situacao}")
+
+class Biblioteca:
+    def __init__(self, nome):
+        self.nome = nome
+        self.livros = []
+
+    def adicionar_livro(self, livro):
+        self.livros.append(livro)
+
+    def listar_livros(self):
+        for livro in self.livros:
+            livro.exibir_dados()
+
+bib1 = Biblioteca("Biblioteca Central")
+
+liv1 = Livro("Princesinha Sofia", "Disney")
+liv2 = Livro("Alice no país das maravilhas", "Lewis", False)
+liv3 = Livro("Livreto", "Ana", True)
+
+bib1.adicionar_livro(liv1)
+bib1.adicionar_livro(liv2)
+bib1.adicionar_livro(liv3)
+
+print("\nLista de livros:")
+bib1.listar_livros()
+
+liv1.emprestar()
+liv1.emprestar()
+
+liv1.devolver()
+
+print("\nLista de livros:")
+bib1.listar_livros()
 
 '''
 Retorno do terminal:
+
+Lista de livros:
+Livro: Princesinha Sofia - Autor: Disney - Situação: Disponível
+Livro: Alice no país das maravilhas - Autor: Lewis - Situação: Emprestado
+Livro: Livreto - Autor: Ana - Situação: Disponível
+
+Livro 'Princesinha Sofia' emprestado com sucesso.
+
+Livro 'Princesinha Sofia' está indisponível, já emprestado.
+
+Livro 'Princesinha Sofia' devolvido com sucesso.
+
+Lista de livros:
+Livro: Princesinha Sofia - Autor: Disney - Situação: Disponível
+Livro: Alice no país das maravilhas - Autor: Lewis - Situação: Emprestado
+Livro: Livreto - Autor: Ana - Situação: Disponível
 
 '''
