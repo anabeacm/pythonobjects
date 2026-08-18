@@ -1,26 +1,26 @@
 '''
-## Questão — Sistema de Gerenciamento de Formas Geométricas
+Questão — Sistema de Gerenciamento de Formas Geométricas
 
-Desenvolva, em Python, um sistema orientado a objetos para gerenciamento de formas geométricas. O sistema deverá demonstrar **abstração, encapsulamento, herança, polimorfismo, composição, métodos especiais, tratamento de erros e diferentes tipos de membros de classe**.
+Desenvolva, em Python, um sistema orientado a objetos para gerenciamento de formas geométricas. O sistema deverá demonstrar abstração, encapsulamento, herança, polimorfismo, composição, métodos especiais, tratamento de erros e diferentes tipos de membros de classe.
 
-### Requisitos
+Requisitos
 
 1. Crie uma classe abstrata `FormaGeometrica` utilizando `ABC`. Ela deverá possuir:
 
-   * um identificador único;
-   * uma propriedade `nome`;
-   * um método abstrato `area()`;
-   * um método abstrato `perimetro()`.
+- Um identificador único;
+- Uma propriedade `nome`;
+- Um método abstrato `area()`;
+- Um método abstrato `perimetro()`.
 
 2. O sistema deverá possuir as classes:
 
-   * `Retangulo`;
-   * `Circulo`;
-   * `Triangulo`.
+- `Retangulo`;
+- `Circulo`;
+- `Triangulo`.
 
-   Todas deverão herdar de `FormaGeometrica` e implementar os métodos abstratos adequadamente.
+Todas deverão herdar de `FormaGeometrica` e implementar os métodos abstratos adequadamente.
 
-3. Utilize **encapsulamento** nos atributos internos. Dimensões como largura, altura, raio e lados não poderão ser alteradas diretamente sem validação.
+3. Utilize encapsulamento nos atributos internos. Dimensões como largura, altura, raio e lados não poderão ser alteradas diretamente sem validação.
 
 4. Utilize `@property` e `@setter` para controlar o acesso às dimensões. Valores inválidos deverão gerar `ValueError`.
 
@@ -28,13 +28,13 @@ Desenvolva, em Python, um sistema orientado a objetos para gerenciamento de form
 
 6. O catálogo deverá possuir métodos para:
 
-   * adicionar uma forma;
-   * remover uma forma pelo identificador;
-   * buscar uma forma;
-   * calcular a soma das áreas de todas as formas;
-   * retornar a forma de maior área.
+- Adicionar uma forma;
+- Remover uma forma pelo identificador;
+- Buscar uma forma;
+- Calcular a soma das áreas de todas as formas;
+- Retornar a forma de maior área.
 
-7. O `CatalogoFormas` deverá possuir um **atributo de classe** responsável por contabilizar quantos catálogos foram criados e um `@classmethod` para consultar essa quantidade.
+7. O `CatalogoFormas` deverá possuir um atributo de classe responsável por contabilizar quantos catálogos foram criados e um `@classmethod` para consultar essa quantidade.
 
 8. Implemente `__str__` em todas as classes de formas, permitindo que objetos sejam exibidos diretamente com `print()`.
 
@@ -46,22 +46,22 @@ Desenvolva, em Python, um sistema orientado a objetos para gerenciamento de form
 
 12. Implemente `__contains__` para permitir verificar se uma forma está presente no catálogo utilizando o operador `in`.
 
-13. Crie uma função `exibir_area(objeto)` que receba qualquer objeto capaz de fornecer uma operação `area()`, **sem verificar explicitamente o tipo do objeto**, demonstrando o conceito de **duck typing**.
+13. Crie uma função `exibir_area(objeto)` que receba qualquer objeto capaz de fornecer uma operação `area()`, sem verificar explicitamente o tipo do objeto, demonstrando o conceito de duck typing.
 
-14. Crie uma classe `RetanguloColorido` que herde de `Retangulo` e acrescente uma propriedade `cor`. A classe deverá demonstrar **especialização por herança** e deverá sobrescrever `__str__`.
+14. Crie uma classe `RetanguloColorido` que herde de `Retangulo` e acrescente uma propriedade `cor`. A classe deverá demonstrar especialização por herança e deverá sobrescrever `__str__`.
 
 15. Crie pelo menos uma situação em que o método `super()` seja utilizado corretamente para inicializar ou reutilizar o comportamento da classe-pai.
 
 16. Utilize tratamento de exceções para situações como:
 
-* dimensões inválidas;
-* tentativa de adicionar ao catálogo algo que não seja uma `FormaGeometrica`;
-* busca de uma forma inexistente;
-* remoção de uma forma inexistente.
+- Dimensões inválidas;
+- Tentativa de adicionar ao catálogo algo que não seja uma `FormaGeometrica`;
+- Busca de uma forma inexistente;
+- Remoção de uma forma inexistente.
 
-17. Utilize pelo menos uma **asserção (`assert`)** para verificar uma pré-condição ou invariante relevante do sistema.
+17. Utilize pelo menos uma asserção (`assert`) para verificar uma pré-condição ou invariante relevante do sistema.
 
-18. Crie uma função ou método de **classe** capaz de construir uma forma a partir de um dicionário de dados, por exemplo:
+18. Crie uma função ou método de classe capaz de construir uma forma a partir de um dicionário de dados, por exemplo:
 
 ```python
 {"tipo": "circulo", "raio": 5}
@@ -69,18 +69,18 @@ Desenvolva, em Python, um sistema orientado a objetos para gerenciamento de form
 
 19. O programa principal deverá:
 
-* criar diferentes formas;
-* alterar algumas propriedades;
-* demonstrar a validação de valores inválidos;
-* armazená-las em um catálogo;
-* exibir as formas;
-* demonstrar `len()`, `in`, `==` e `<`;
-* ordenar as formas;
-* calcular a área total;
-* identificar a maior forma;
-* demonstrar o funcionamento do duck typing;
-* demonstrar o tratamento das exceções;
-* demonstrar a criação de uma forma a partir de um dicionário.
+- Criar diferentes formas;
+- Alterar algumas propriedades;
+- Demonstrar a validação de valores inválidos;
+- Armazená-las em um catálogo;
+- Exibir as formas;
+- Demonstrar `len()`, `in`, `==` e `<`;
+- Ordenar as formas;
+- Calcular a área total;
+- Identificar a maior forma;
+- Demonstrar o funcionamento do duck typing;
+- Demonstrar o tratamento das exceções;
+- Demonstrar a criação de uma forma a partir de um dicionário.
 
 Restrição: Não utilize bibliotecas externas. O objetivo é que a solução demonstre claramente os conceitos de abstração, encapsulamento, herança, composição, polimorfismo, sobrecarga/sobrescrita de operadores, propriedades, atributos e métodos de classe, métodos abstratos, exceções e duck typing.
 
@@ -89,7 +89,6 @@ Restrição: Não utilize bibliotecas externas. O objetivo é que a solução de
 from abc import ABC, abstractmethod
 from math import pi
 from typing import Any
-
 
 class FormaGeometrica(ABC):
     _quantidade_formas = 0
