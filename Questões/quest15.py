@@ -272,6 +272,5 @@ Considere, por exemplo:
 - Número de páginas deve ser maior que zero;
 - Edição deve ser maior que zero;
 - Duração deve ser maior que zero.
-
 '''
 
