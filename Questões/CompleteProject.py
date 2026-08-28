@@ -29,7 +29,6 @@ NetworkDevice:
 
     somente podem ser removidos da lista quem está na lista
 
-
 Testes de métodos na MAIN
 '''
 
@@ -40,6 +39,7 @@ class NetworkDevice:
 
         self.__endDevices = []
 
+# Get and Set name
     @property
     def name(self):
         return self.__name
@@ -50,6 +50,7 @@ class NetworkDevice:
         else:
             raise RuntimeError('Device name must be a non-empty string')
 
+# Get and Set address
     @property
     def address(self):
         return self.__address
@@ -65,13 +66,14 @@ class NetworkDevice:
             pass
     '''
 
-    # Teste de igualdade de EndDevice e dispara RuntimeError - Validação de tipo =/ Validação de método!
+# Teste de igualdade de EndDevice e dispara RuntimeError - Validação de tipo =/ Validação de método!
     def __eq__(self, other):
         if isinstance(other, EndDevice):
             return self.address == other.address
         else:
             raise RuntimeError('EndDevice can only be compared to other EndDevice')
 
+# Método adicionar endDevice
     def add(self, endDevice):
         if isinstance(endDevice, EndDevice):
             if endDevice not in self.__endDevices:
@@ -80,7 +82,8 @@ class NetworkDevice:
                 raise RuntimeError('Can only add an EndDevice once')
         else:
             raise RuntimeError('Can only add EndDevices')
-        
+
+# Método remover endDevice
     def remove(self, endDevice):
         if isinstance(endDevice, EndDevice):
             if endDevice in self.__endDevices:
@@ -89,7 +92,8 @@ class NetworkDevice:
                 raise RuntimeError('EndDevice does not belong to NetworkDevice.')
         else:
             raise RuntimeError('Can only remove EndDevices')
-    
+
+# Método print de informações
     def __str__(self): # Dunder String return String
         res = f'{self.__class__.__name__} -> [name: {self.name}, address: {self.address}]\n'
         for ed in self.__endDevices:
@@ -106,6 +110,7 @@ class EndDevice:
         self.name = name
         self.address = address
 
+# Get and Set name
     @property
     def name(self):
         return self.__name
@@ -116,6 +121,7 @@ class EndDevice:
         else:
             raise RuntimeError('Device name must be a non-empty string')
 
+# Get and Set address
     @property
     def address(self):
         return self.__address
