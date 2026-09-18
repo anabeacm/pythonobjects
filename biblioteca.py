@@ -5,7 +5,7 @@ class Biblioteca:
         self.nome = nome
         self.__livros = []
 
-# Gets Sets B
+# Gets Sets Biblioteca
     @property
     def nome(self):
         return self.__nome
