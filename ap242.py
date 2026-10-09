@@ -8,7 +8,7 @@ class Veiculo:
         Veiculo.identificador += 1
         return Veiculo.identificador
 
-    def __init__(self, nome='Veiculo', estado='desligado', operacao='parado'):
+    def __init__(self, nome='veiculo', estado='desligado', operacao='parado'):
         self.__id = Veiculo.countidentificador()
         self.nome = nome
         self.__estado = estado
@@ -39,11 +39,11 @@ class Veiculo:
 
     @operacao.setter
     def operacao(self, operacao_):
-        if self.__estado is not 'ligado':
+        if self.__estado != 'ligado':
             print('O veículo precisa estar ligado para mudar de operação.')
             return
 
-        if self.__operacao is not operacao_:
+        if self.__operacao != operacao_:
             self.__operacao = operacao_
             print(f'Estado: {self.__estado}')
             print(f'Operação: {self.__operacao}')
@@ -74,8 +74,11 @@ class Terrestre(ABC):
 
 class Carro(Veiculo, Terrestre):
 
+    def __init__(self, nome='veiculo', estado='desligado', operacao='parado'):
+        super().__init__(nome, estado, operacao)
+
     def deslocar(self, valor):
-        if self.estado is not 'ligado':
+        if self.estado != 'ligado':
             print('O carro precisa estar ligado para se deslocar.')
             return
 
@@ -94,6 +97,9 @@ class Maritimo(ABC):
 
 class Barco(Veiculo, Maritimo):
 
+    def __init__(self, nome='veiculo', estado='desligado', operacao='parado'):
+        super().__init__(nome, estado, operacao)
+
     def navegar(self, valor):
         if self.estado != 'ligado':
             print('O barco precisa estar ligado para navegar.')
@@ -108,6 +114,9 @@ class Barco(Veiculo, Maritimo):
 
 class Aereo(ABC):
 
+    def __init__(self, nome='veiculo', estado='desligado', operacao='parado'):
+        super().__init__(nome, estado, operacao)
+        
     @abstractmethod
     def decolar(self):
         pass
