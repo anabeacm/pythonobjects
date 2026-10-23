@@ -1,5 +1,25 @@
 class pedido:
-    pass
+    def __init__(self, nome = 'Cliente', *pecas, **obs):
+    
+            self.nome = nome
+            self.__pecas = []
+            self.adic_pecas(*pecas)
+            self.__obs = {}
+            self.adic_obs(*obs)
+
+    def adic_pecas(self, *pecas):
+        for p in pecas:
+            if isinstance(p, Peca):
+                if p not in self.pecas:
+                    self.__pecas.append(p)
+                else:
+                    raise ValueError('A Peça ja foi adicionada ao pedido')
+            else:
+                raise TypeError('Só é possível adicionar Peças ao pedido')
+
+    def adic_obs(self, **obs):
+        for key, value in obs.items():
+            self.__obs[key] = value
 
 class Peca:
     def __init__(self, modelo, valor):
